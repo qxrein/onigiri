@@ -1,0 +1,19 @@
+[package]
+name = "onigiri"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+nix_config = ["dep:serde", "dep:serde_json", "dep:nix"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1.0"
+x11 = "2.21"
+crossterm = "0.27"
+tui = "0.19"
+
+# Optional dependencies
+serde = { version = "1.0", features = ["derive"], optional = true }
+serde_json = { version = "1.0", optional = true }
+nix = { version = "0.26", optional = true }
